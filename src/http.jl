@@ -7,9 +7,9 @@
 #==============================================================================#
 
 import URIParser: URI, query_params
-import Requests: format_query_str, process_response, open_stream,
-                 mimetype, text, bytes, OnBody,
-                 BodyDone, EarlyEOF
+import RequestsMSR: format_query_str, process_response, open_stream,
+    mimetype, text, bytes, OnBody,
+    BodyDone, EarlyEOF
 import HttpCommon: Request, Response, STATUS_CODES
 import Base: show, UVError
 

@@ -13,8 +13,8 @@ export html2md
 
 
 using NodeJS
-using Requests.post
-using Requests.URI
+using RequestsMSR.post
+using RequestsMSR.URI
 
 const tcp_port = 34562
 

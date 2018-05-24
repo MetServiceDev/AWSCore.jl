@@ -286,7 +286,7 @@ function service_operation(service, operation, info)
         $m.$sig1
         $m.$sig2
 
-        using AWSCore.Services.$request
+        using AWSCoreMSR.Services.$request
         $sig3
         $sig4
 
@@ -299,7 +299,7 @@ function service_operation(service, operation, info)
 
     @inline $name(aws::AWSConfig=default_aws_config(); args...) = $name(aws, args)
 
-    @inline $name(aws::AWSConfig, args) = AWSCore.Services.$request(aws,$method$resource$operation args)
+    @inline $name(aws::AWSConfig, args) = AWSCoreMSR.Services.$request(aws,$method$resource$operation args)
 
     @inline $name(args) = $name(default_aws_config(), args)
 
@@ -366,7 +366,7 @@ function service_request_function(service)
 """
 function $name(aws::AWSConfig, $(verb)$(resource)$(operation)args=[])
 
-    AWSCore.service_$protocol(
+    AWSCoreMSR.service_$protocol(
         aws;
         $(join(args, ",\n        ")))
 end
@@ -395,7 +395,7 @@ __precompile__()
 
 module $m
 
-using AWSCore
+using AWSCoreMSR
 
 
 """,
@@ -435,7 +435,7 @@ function service_documentation(service)
 
     This document is generated from
     [$(meta["sourceFile"])]($(meta["sourceURL"])).
-    See [JuliaCloud/AWSCore.jl](https://github.com/JuliaCloud/AWSCore.jl).
+    See [JuliaCloud/AWSCoreMSR.jl](https://github.com/JuliaCloud/AWSCoreMSR.jl).
 
     ```@meta
     CurrentModule = $m
@@ -474,7 +474,7 @@ function service_generate(name, definition)
     write(joinpath(pkg_dir, "REQUIRE"),
         """
         julia 0.5
-        AWSCore
+        AWSCoreMSR
         DataStructures
         """)
     write(joinpath(pkg_dir, "README.md"),
@@ -483,12 +483,12 @@ function service_generate(name, definition)
 
         Julia interface for [$(meta["serviceFullName"])](https://docs.aws.amazon.com/goto/WebAPI/$(meta["uid"]))
 
-        See [$m.jl API Reference](https://juliacloud.github.io/AWSCore.jl/build/$m.html).
+        See [$m.jl API Reference](https://juliacloud.github.io/AWSCoreMSR.jl/build/$m.html).
 
-        See [JuliaCloud/AWSCore.jl](https://github.com/JuliaCloud/AWSCore.jl).
+        See [JuliaCloud/AWSCoreMSR.jl](https://github.com/JuliaCloud/AWSCoreMSR.jl).
 
 
-        Please file issues under [JuliaCloud/AWSCore.jl/issues](https://github.com/JuliaCloud/AWSCore.jl/issues).
+        Please file issues under [JuliaCloud/AWSCoreMSR.jl/issues](https://github.com/JuliaCloud/AWSCoreMSR.jl/issues).
 
         This module is generated from
         [$(meta["sourceFile"])]($(meta["sourceURL"])).
@@ -510,7 +510,7 @@ function generate_doc(services)
 
     doc = """
         using Documenter
-        using AWSCore
+        using AWSCoreMSR
         using AWSS3
         using AWSSES
         using AWSSQS
@@ -522,11 +522,11 @@ function generate_doc(services)
     end
 
     doc *= """
-    makedocs(modules = [AWSCore, AWSS3, AWSSES, AWSSQS, AWSSNS,
+    makedocs(modules = [AWSCoreMSR, AWSS3, AWSSES, AWSSQS, AWSSNS,
                         $(join([api_module_name(s) for s in services], ","))],
              format = :html,
-             sitename = "AWSCore.jl",
-             pages = ["AWSCore.jl" => "index.md",
+             sitename = "AWSCoreMSR.jl",
+             pages = ["AWSCoreMSR.jl" => "index.md",
                       "AWSS3.jl" => "AWSS3.md",
                       "AWSSQS.jl" => "AWSSQS.md",
                       "AWSSES.jl" => "AWSSES.md",
@@ -566,7 +566,7 @@ function generate_all()
 
 module Services
 
-using ..AWSCore
+using ..AWSCoreMSR
 
 $(join(request_functions, "\n"))
 

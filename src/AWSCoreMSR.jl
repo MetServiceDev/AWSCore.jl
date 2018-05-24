@@ -8,7 +8,7 @@
 __precompile__()
 
 
-module AWSCore
+module AWSCoreMSR
 
 
 export AWSException, AWSConfig, AWSRequest,
@@ -414,7 +414,7 @@ function do_request(r::AWSRequest)
         if !haskey(r, :headers)
             r[:headers] = Dict()
         end
-        r[:headers]["User-Agent"] = "AWSCore.jl/0.0.0"
+        r[:headers]["User-Agent"] = "AWSCoreMSR.jl/0.0.0"
         r[:headers]["Host"]       = URI(r[:url]).host
 
         # Load local system credentials if needed...
@@ -443,7 +443,7 @@ function do_request(r::AWSRequest)
         e = AWSException(e)
 
         if debug_level > 0
-            println("Warning: AWSCore.do_request() exception: $(typeof(e))")
+            println("Warning: AWSCoreMSR.do_request() exception: $(typeof(e))")
         end
 
         # Handle expired signature...
@@ -516,7 +516,7 @@ end
 include("Services.jl")
 
 
-end # module AWSCore
+end 
 
 
 #==============================================================================#

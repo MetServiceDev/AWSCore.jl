@@ -7,11 +7,11 @@
 
 module Services
 
-using ..AWSCore
+using ..AWSCoreMSR
 
 function acm(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "acm",
         version      = "2015-12-08",
@@ -26,7 +26,7 @@ acm(operation, args=[]) =
 
 function apigateway(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "apigateway",
         version      = "2015-07-09",
@@ -40,7 +40,7 @@ apigateway(verb, resource, args=[]) =
 
 function application_autoscaling(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "application-autoscaling",
         version      = "2016-02-06",
@@ -56,7 +56,7 @@ application_autoscaling(operation, args=[]) =
 
 function appstream(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "appstream",
         version      = "2016-12-01",
@@ -72,7 +72,7 @@ appstream(operation, args=[]) =
 
 function athena(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "athena",
         version      = "2017-05-18",
@@ -87,7 +87,7 @@ athena(operation, args=[]) =
 
 function autoscaling(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "autoscaling",
         version      = "2011-01-01",
@@ -100,7 +100,7 @@ autoscaling(operation, args=[]) =
 
 function batch(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "batch",
         version      = "2016-08-10",
@@ -114,7 +114,7 @@ batch(verb, resource, args=[]) =
 
 function budgets(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "budgets",
         version      = "2016-10-20",
@@ -129,7 +129,7 @@ budgets(operation, args=[]) =
 
 function clouddirectory(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "clouddirectory",
         version      = "2016-05-10",
@@ -143,7 +143,7 @@ clouddirectory(verb, resource, args=[]) =
 
 function cloudformation(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "cloudformation",
         version      = "2010-05-15",
@@ -156,7 +156,7 @@ cloudformation(operation, args=[]) =
 
 function cloudfront(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_xml(
+    AWSCoreMSR.service_rest_xml(
         aws;
         service      = "cloudfront",
         version      = "2017-03-25",
@@ -170,7 +170,7 @@ cloudfront(verb, resource, args=[]) =
 
 function cloudhsm(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "cloudhsm",
         version      = "2014-05-30",
@@ -185,7 +185,7 @@ cloudhsm(operation, args=[]) =
 
 function cloudsearch(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "cloudsearch",
         version      = "2013-01-01",
@@ -198,7 +198,7 @@ cloudsearch(operation, args=[]) =
 
 function cloudsearchdomain(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "cloudsearch",
         version      = "2013-01-01",
@@ -213,7 +213,7 @@ cloudsearchdomain(verb, resource, args=[]) =
 
 function cloudtrail(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "cloudtrail",
         version      = "2013-11-01",
@@ -228,7 +228,7 @@ cloudtrail(operation, args=[]) =
 
 function codebuild(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "codebuild",
         version      = "2016-10-06",
@@ -243,7 +243,7 @@ codebuild(operation, args=[]) =
 
 function codecommit(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "codecommit",
         version      = "2015-04-13",
@@ -258,7 +258,7 @@ codecommit(operation, args=[]) =
 
 function codedeploy(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "codedeploy",
         version      = "2014-10-06",
@@ -273,7 +273,7 @@ codedeploy(operation, args=[]) =
 
 function codepipeline(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "codepipeline",
         version      = "2015-07-09",
@@ -288,7 +288,7 @@ codepipeline(operation, args=[]) =
 
 function codestar(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "codestar",
         version      = "2017-04-19",
@@ -303,7 +303,7 @@ codestar(operation, args=[]) =
 
 function cognito_identity(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "cognito-identity",
         version      = "2014-06-30",
@@ -318,7 +318,7 @@ cognito_identity(operation, args=[]) =
 
 function cognito_idp(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "cognito-idp",
         version      = "2016-04-18",
@@ -333,7 +333,7 @@ cognito_idp(operation, args=[]) =
 
 function cognito_sync(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "cognito-sync",
         version      = "2014-06-30",
@@ -347,7 +347,7 @@ cognito_sync(verb, resource, args=[]) =
 
 function config(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "config",
         version      = "2014-11-12",
@@ -362,7 +362,7 @@ config(operation, args=[]) =
 
 function cur(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "cur",
         version      = "2017-01-06",
@@ -377,7 +377,7 @@ cur(operation, args=[]) =
 
 function datapipeline(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "datapipeline",
         version      = "2012-10-29",
@@ -392,7 +392,7 @@ datapipeline(operation, args=[]) =
 
 function dax(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "dax",
         version      = "2017-04-19",
@@ -407,7 +407,7 @@ dax(operation, args=[]) =
 
 function devicefarm(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "devicefarm",
         version      = "2015-06-23",
@@ -422,7 +422,7 @@ devicefarm(operation, args=[]) =
 
 function directconnect(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "directconnect",
         version      = "2012-10-25",
@@ -437,7 +437,7 @@ directconnect(operation, args=[]) =
 
 function discovery(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "discovery",
         version      = "2015-11-01",
@@ -452,7 +452,7 @@ discovery(operation, args=[]) =
 
 function dms(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "dms",
         version      = "2016-01-01",
@@ -467,7 +467,7 @@ dms(operation, args=[]) =
 
 function ds(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "ds",
         version      = "2015-04-16",
@@ -482,7 +482,7 @@ ds(operation, args=[]) =
 
 function dynamodb(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "dynamodb",
         version      = "2012-08-10",
@@ -497,7 +497,7 @@ dynamodb(operation, args=[]) =
 
 function ec2(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "ec2",
         version      = "2016-11-15",
@@ -510,7 +510,7 @@ ec2(operation, args=[]) =
 
 function ecr(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "ecr",
         version      = "2015-09-21",
@@ -525,7 +525,7 @@ ecr(operation, args=[]) =
 
 function ecs(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "ecs",
         version      = "2014-11-13",
@@ -540,7 +540,7 @@ ecs(operation, args=[]) =
 
 function elasticache(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "elasticache",
         version      = "2015-02-02",
@@ -553,7 +553,7 @@ elasticache(operation, args=[]) =
 
 function elasticbeanstalk(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "elasticbeanstalk",
         version      = "2010-12-01",
@@ -566,7 +566,7 @@ elasticbeanstalk(operation, args=[]) =
 
 function elasticfilesystem(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "elasticfilesystem",
         version      = "2015-02-01",
@@ -580,7 +580,7 @@ elasticfilesystem(verb, resource, args=[]) =
 
 function elasticloadbalancing(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "elasticloadbalancing",
         version      = "2012-06-01",
@@ -593,7 +593,7 @@ elasticloadbalancing(operation, args=[]) =
 
 function elasticloadbalancingv2(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "elasticloadbalancing",
         version      = "2015-12-01",
@@ -606,7 +606,7 @@ elasticloadbalancingv2(operation, args=[]) =
 
 function elasticmapreduce(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "elasticmapreduce",
         version      = "2009-03-31",
@@ -621,7 +621,7 @@ elasticmapreduce(operation, args=[]) =
 
 function elastictranscoder(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "elastictranscoder",
         version      = "2012-09-25",
@@ -635,7 +635,7 @@ elastictranscoder(verb, resource, args=[]) =
 
 function email(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "ses",
         version      = "2010-12-01",
@@ -649,7 +649,7 @@ email(operation, args=[]) =
 
 function entitlement_marketplace(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "aws-marketplace",
         version      = "2017-01-11",
@@ -665,7 +665,7 @@ entitlement_marketplace(operation, args=[]) =
 
 function es(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "es",
         version      = "2015-01-01",
@@ -679,7 +679,7 @@ es(verb, resource, args=[]) =
 
 function events(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "events",
         version      = "2015-10-07",
@@ -694,7 +694,7 @@ events(operation, args=[]) =
 
 function firehose(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "firehose",
         version      = "2015-08-04",
@@ -709,7 +709,7 @@ firehose(operation, args=[]) =
 
 function gamelift(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "gamelift",
         version      = "2015-10-01",
@@ -724,7 +724,7 @@ gamelift(operation, args=[]) =
 
 function glacier(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "glacier",
         version      = "2012-06-01",
@@ -738,7 +738,7 @@ glacier(verb, resource, args=[]) =
 
 function greengrass(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "greengrass",
         version      = "2017-06-07",
@@ -752,7 +752,7 @@ greengrass(verb, resource, args=[]) =
 
 function health(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "health",
         version      = "2016-08-04",
@@ -767,7 +767,7 @@ health(operation, args=[]) =
 
 function iam(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "iam",
         version      = "2010-05-08",
@@ -780,7 +780,7 @@ iam(operation, args=[]) =
 
 function importexport(aws::AWSConfig, verb, resource, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "importexport",
         version      = "2010-06-01",
@@ -795,7 +795,7 @@ importexport(verb, resource, operation, args=[]) =
 
 function inspector(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "inspector",
         version      = "2016-02-16",
@@ -810,7 +810,7 @@ inspector(operation, args=[]) =
 
 function iot(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "execute-api",
         version      = "2015-05-28",
@@ -825,7 +825,7 @@ iot(verb, resource, args=[]) =
 
 function iot_data(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "iotdata",
         version      = "2015-05-28",
@@ -840,7 +840,7 @@ iot_data(verb, resource, args=[]) =
 
 function kinesis(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "kinesis",
         version      = "2013-12-02",
@@ -855,7 +855,7 @@ kinesis(operation, args=[]) =
 
 function kinesisanalytics(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "kinesisanalytics",
         version      = "2015-08-14",
@@ -870,7 +870,7 @@ kinesisanalytics(operation, args=[]) =
 
 function kms(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "kms",
         version      = "2014-11-01",
@@ -885,7 +885,7 @@ kms(operation, args=[]) =
 
 function lambda(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "lambda",
         version      = "2015-03-31",
@@ -899,7 +899,7 @@ lambda(verb, resource, args=[]) =
 
 function lex_models(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "lex",
         version      = "2017-04-19",
@@ -914,7 +914,7 @@ lex_models(verb, resource, args=[]) =
 
 function lightsail(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "lightsail",
         version      = "2016-11-28",
@@ -929,7 +929,7 @@ lightsail(operation, args=[]) =
 
 function logs(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "logs",
         version      = "2014-03-28",
@@ -944,7 +944,7 @@ logs(operation, args=[]) =
 
 function machinelearning(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "machinelearning",
         version      = "2014-12-12",
@@ -959,7 +959,7 @@ machinelearning(operation, args=[]) =
 
 function marketplacecommerceanalytics(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "marketplacecommerceanalytics",
         version      = "2015-07-01",
@@ -974,7 +974,7 @@ marketplacecommerceanalytics(operation, args=[]) =
 
 function meteringmarketplace(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "aws-marketplace",
         version      = "2016-01-14",
@@ -990,7 +990,7 @@ meteringmarketplace(operation, args=[]) =
 
 function mobileanalytics(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "mobileanalytics",
         version      = "2014-06-05",
@@ -1004,7 +1004,7 @@ mobileanalytics(verb, resource, args=[]) =
 
 function monitoring(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "monitoring",
         version      = "2010-08-01",
@@ -1017,7 +1017,7 @@ monitoring(operation, args=[]) =
 
 function mturk_requester(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "mturk-requester",
         version      = "2017-01-17",
@@ -1032,7 +1032,7 @@ mturk_requester(operation, args=[]) =
 
 function opsworks(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "opsworks",
         version      = "2013-02-18",
@@ -1047,7 +1047,7 @@ opsworks(operation, args=[]) =
 
 function opsworkscm(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "opsworks-cm",
         version      = "2016-11-01",
@@ -1062,7 +1062,7 @@ opsworkscm(operation, args=[]) =
 
 function organizations(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "organizations",
         version      = "2016-11-28",
@@ -1077,7 +1077,7 @@ organizations(operation, args=[]) =
 
 function pinpoint(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "mobiletargeting",
         version      = "2016-12-01",
@@ -1092,7 +1092,7 @@ pinpoint(verb, resource, args=[]) =
 
 function polly(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "polly",
         version      = "2016-06-10",
@@ -1106,7 +1106,7 @@ polly(verb, resource, args=[]) =
 
 function rds(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "rds",
         version      = "2014-10-31",
@@ -1119,7 +1119,7 @@ rds(operation, args=[]) =
 
 function redshift(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "redshift",
         version      = "2012-12-01",
@@ -1132,7 +1132,7 @@ redshift(operation, args=[]) =
 
 function rekognition(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "rekognition",
         version      = "2016-06-27",
@@ -1147,7 +1147,7 @@ rekognition(operation, args=[]) =
 
 function resourcegroupstaggingapi(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "tagging",
         version      = "2017-01-26",
@@ -1162,7 +1162,7 @@ resourcegroupstaggingapi(operation, args=[]) =
 
 function route53(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_xml(
+    AWSCoreMSR.service_rest_xml(
         aws;
         service      = "route53",
         version      = "2013-04-01",
@@ -1176,7 +1176,7 @@ route53(verb, resource, args=[]) =
 
 function route53domains(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "route53domains",
         version      = "2014-05-15",
@@ -1191,7 +1191,7 @@ route53domains(operation, args=[]) =
 
 function runtime_lex(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "lex",
         version      = "2016-11-28",
@@ -1206,7 +1206,7 @@ runtime_lex(verb, resource, args=[]) =
 
 function s3(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_xml(
+    AWSCoreMSR.service_rest_xml(
         aws;
         service      = "s3",
         version      = "2006-03-01",
@@ -1220,7 +1220,7 @@ s3(verb, resource, args=[]) =
 
 function sdb(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "sdb",
         version      = "2009-04-15",
@@ -1233,7 +1233,7 @@ sdb(operation, args=[]) =
 
 function servicecatalog(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "servicecatalog",
         version      = "2015-12-10",
@@ -1248,7 +1248,7 @@ servicecatalog(operation, args=[]) =
 
 function shield(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "shield",
         version      = "2016-06-02",
@@ -1263,7 +1263,7 @@ shield(operation, args=[]) =
 
 function sms(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "sms",
         version      = "2016-10-24",
@@ -1278,7 +1278,7 @@ sms(operation, args=[]) =
 
 function snowball(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "snowball",
         version      = "2016-06-30",
@@ -1293,7 +1293,7 @@ snowball(operation, args=[]) =
 
 function sns(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "sns",
         version      = "2010-03-31",
@@ -1306,7 +1306,7 @@ sns(operation, args=[]) =
 
 function sqs(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "sqs",
         version      = "2012-11-05",
@@ -1319,7 +1319,7 @@ sqs(operation, args=[]) =
 
 function ssm(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "ssm",
         version      = "2014-11-06",
@@ -1334,7 +1334,7 @@ ssm(operation, args=[]) =
 
 function states(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "states",
         version      = "2016-11-23",
@@ -1349,7 +1349,7 @@ states(operation, args=[]) =
 
 function storagegateway(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "storagegateway",
         version      = "2013-06-30",
@@ -1364,7 +1364,7 @@ storagegateway(operation, args=[]) =
 
 function streams_dynamodb(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "dynamodb",
         version      = "2012-08-10",
@@ -1380,7 +1380,7 @@ streams_dynamodb(operation, args=[]) =
 
 function sts(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_query(
+    AWSCoreMSR.service_query(
         aws;
         service      = "sts",
         version      = "2011-06-15",
@@ -1393,7 +1393,7 @@ sts(operation, args=[]) =
 
 function support(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "support",
         version      = "2013-04-15",
@@ -1408,7 +1408,7 @@ support(operation, args=[]) =
 
 function swf(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "swf",
         version      = "2012-01-25",
@@ -1423,7 +1423,7 @@ swf(operation, args=[]) =
 
 function waf(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "waf",
         version      = "2015-08-24",
@@ -1438,7 +1438,7 @@ waf(operation, args=[]) =
 
 function waf_regional(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "waf-regional",
         version      = "2016-11-28",
@@ -1453,7 +1453,7 @@ waf_regional(operation, args=[]) =
 
 function workdocs(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "workdocs",
         version      = "2016-05-01",
@@ -1467,7 +1467,7 @@ workdocs(verb, resource, args=[]) =
 
 function workspaces(aws::AWSConfig, operation, args=[])
 
-    AWSCore.service_json(
+    AWSCoreMSR.service_json(
         aws;
         service      = "workspaces",
         version      = "2015-04-08",
@@ -1482,7 +1482,7 @@ workspaces(operation, args=[]) =
 
 function xray(aws::AWSConfig, verb, resource, args=[])
 
-    AWSCore.service_rest_json(
+    AWSCoreMSR.service_rest_json(
         aws;
         service      = "xray",
         version      = "2016-04-12",

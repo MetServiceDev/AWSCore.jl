@@ -13,7 +13,7 @@ module AWSMetadata
 
 
 using JSON
-using Requests: get, post, URI, Response
+using RequestsMSR: get, post, URI, Response
 using DataStructures
 using Retry
 
